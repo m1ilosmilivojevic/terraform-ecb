@@ -5,7 +5,7 @@ provider "aws" {
 resource "aws_instance" "ubuntu_ec2" {
   ami                    = "ami-0c1ac8a41498c1a9c"
   instance_type          = "t3.micro"
-  key_name               = "miles-key2"
+  key_name               = # your key goes here
   vpc_security_group_ids = [aws_security_group.allow_ssh_http.id]
   user_data              = file("init.sh")
 
